@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, AlertCircle, Loader2, Users, UserCheck, ShieldCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle2, AlertCircle, Loader2, Users, UserCheck, ExternalLink, Globe } from 'lucide-react';
 import { submitRegistration } from '../services/registrationService';
 
 export default function Registration() {
+  const UNSTOP_URL = "https://unstop.com/p/cloudforge-2026-bannari-amman-institute-of-technology-1759755?utm_medium=Share&utm_source=online_coding_challenge&utm_campaign=Snehas47482";
+
   const [teamSize, setTeamSize] = useState(2);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionSuccess, setSubmissionSuccess] = useState(null);
@@ -170,9 +172,9 @@ export default function Registration() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col mb-12 text-center">
+        <div className="flex flex-col mb-10 text-center">
           <div className="font-mono text-xs font-bold text-[#F97316] tracking-widest uppercase mb-2">
-            09 / OFFICIAL REGISTRATION
+            OFFICIAL REGISTRATION
           </div>
           <h2 className="font-heading font-black text-4xl sm:text-6xl text-white tracking-tight uppercase leading-[0.95]">
             READY TO <span className="text-[#F97316]">BUILD?</span>
@@ -180,6 +182,45 @@ export default function Registration() {
           <p className="font-mono text-sm text-[#E4E4E7] tracking-wider uppercase mt-3">
             REGISTER FOR CLOUD FORGE 2026
           </p>
+        </div>
+
+        {/* Option 1: Unstop Platform Banner */}
+        <div className="bg-[#27272A]/80 border-2 border-[#F97316]/60 p-6 sm:p-8 rounded-xs mb-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl hover:border-[#F97316] transition-all">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 bg-[#F97316] text-[#18181B] rounded-xs flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#F97316]/20">
+              <Globe className="w-7 h-7" />
+            </div>
+            <div>
+              <span className="font-mono text-xs text-[#F97316] tracking-widest uppercase font-bold block mb-1">
+                RECOMMENDED PORTAL
+              </span>
+              <h3 className="font-heading font-extrabold text-xl text-white uppercase tracking-wide">
+                REGISTER THROUGH UNSTOP
+              </h3>
+              <p className="font-sans text-xs text-[#E4E4E7]/90 mt-1 max-w-md leading-relaxed">
+                Prefer registering via the official Unstop platform? Click below to submit your team application on Unstop.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href={UNSTOP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto bg-[#F97316] hover:bg-[#EA580C] text-[#18181B] font-mono font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-xs transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-xl shadow-[#F97316]/30 border border-[#F97316]"
+          >
+            REGISTER ON UNSTOP <ExternalLink className="w-4 h-4" />
+          </a>
+        </div>
+
+        {/* Divider */}
+        <div className="relative my-8 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-[#27272A]" />
+          </div>
+          <span className="relative bg-[#18181B] px-4 font-mono text-xs text-[#52525B] uppercase tracking-widest">
+            OR FILL DIRECT TEAM FORM BELOW
+          </span>
         </div>
 
         {/* If Successful Submission State */}
@@ -570,7 +611,7 @@ export default function Registration() {
                   </>
                 ) : (
                   <>
-                    REGISTER TEAM <ArrowRight className="w-5 h-5" />
+                    REGISTER TEAM DIRECTLY <ArrowRight className="w-5 h-5" />
                   </>
                 )}
               </button>
