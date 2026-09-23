@@ -20,7 +20,7 @@ export default function App() {
         <EventDetails />
         <HackathonFormat />
         <Evaluation />
-        <Eligibility />
+        {/* <Eligibility /> */}
         <Rules />
         <Registration />
         <FAQ />
