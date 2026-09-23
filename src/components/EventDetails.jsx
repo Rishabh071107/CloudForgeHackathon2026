@@ -3,7 +3,7 @@ import { HACKATHON_DATA } from '../data/hackathonData';
 
 export default function EventDetails() {
   return (
-    <section className="py-24 bg-[#18181B] text-white relative border-b border-[#27272A] overflow-hidden">
+    <section id="specifications" className="py-24 bg-[#18181B] text-white relative border-b border-[#27272A] overflow-hidden">
       
       {/* Background Architectural Grid Lines */}
       <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
@@ -13,7 +13,7 @@ export default function EventDetails() {
         {/* Section Header */}
         <div className="flex flex-col mb-16">
           <div className="font-mono text-xs font-bold text-[#F97316] tracking-widest uppercase mb-2">
-            02 / SPECIFICATIONS
+            01 / SPECIFICATIONS
           </div>
           <h2 className="font-heading font-black text-4xl sm:text-7xl tracking-tighter text-white uppercase">
             THE <span className="text-[#F97316]">SPRINT</span>

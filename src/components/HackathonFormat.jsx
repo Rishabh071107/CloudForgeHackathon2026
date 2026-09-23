@@ -16,7 +16,7 @@ export default function HackathonFormat() {
         {/* Section Header */}
         <div className="flex flex-col mb-12">
           <div className="font-mono text-xs font-bold text-[#F97316] tracking-widest uppercase mb-2">
-            01 / FORMAT & TIMELINE
+            02 / FORMAT & TIMELINE
           </div>
           <h2 className="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight uppercase leading-[0.95]">
             FROM PROBLEM <span className="text-[#F97316]">TO PROTOTYPE.</span>

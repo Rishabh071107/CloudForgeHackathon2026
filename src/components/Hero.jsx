@@ -73,10 +73,10 @@ export default function Hero() {
               </a>
 
               <a
-                href="#format"
+                href="#specifications"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleScrollTo('#format');
+                  handleScrollTo('#specifications');
                 }}
                 className="bg-[#27272A] hover:bg-[#52525B]/40 text-[#E4E4E7] hover:text-white font-mono font-medium text-sm uppercase tracking-wider px-6 py-4 rounded-xs border border-[#52525B]/50 transition-all flex items-center justify-center gap-2"
               >

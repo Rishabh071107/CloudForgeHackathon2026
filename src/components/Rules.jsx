@@ -14,7 +14,7 @@ export default function Rules() {
         {/* Section Header */}
         <div className="flex flex-col mb-16">
           <div className="font-mono text-xs font-bold text-[#F97316] tracking-widest uppercase mb-2">
-            08 / HACKATHON RULES
+            04 / HACKATHON RULES
           </div>
           <h2 className="font-heading font-black text-4xl sm:text-6xl text-white tracking-tight uppercase leading-[0.95]">
             BEFORE <br />

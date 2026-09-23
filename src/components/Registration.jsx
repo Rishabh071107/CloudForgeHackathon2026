@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, AlertCircle, Loader2, Users, UserCheck, Exter
 import { submitRegistration } from '../services/registrationService';
 
 export default function Registration() {
-  const UNSTOP_URL = "https://unstop.com/p/cloudforge-2026-bannari-amman-institute-of-technology-1759755?utm_medium=Share&utm_source=online_coding_challenge&utm_campaign=Snehas47482";
+  const REGISTRATION_URL = import.meta.env.VITE_REGISTRATION_URL || "https://unstop.com/p/cloudforge-2026-bannari-amman-institute-of-technology-1760083?lb=OKg6LcLw&utm_medium=Share&utm_source=competitions&utm_campaign=Snehas47482";
 
   const [teamSize, setTeamSize] = useState(2);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -16,13 +16,13 @@ export default function Registration() {
     teamLeader: {
       name: '',
       department: '',
-      year: '3rd Year',
+      year: '2nd Year',
       email: '',
       phone: ''
     },
-    member2: { name: '', department: '', year: '3rd Year' },
-    member3: { name: '', department: '', year: '3rd Year' },
-    member4: { name: '', department: '', year: '3rd Year' },
+    member2: { name: '', department: '', year: '2nd Year' },
+    member3: { name: '', department: '', year: '2nd Year' },
+    member4: { name: '', department: '', year: '2nd Year' },
     confirmStudentBit: false,
     agreeRules: false
   });
@@ -192,10 +192,10 @@ export default function Registration() {
             </div>
             <div>
               <span className="font-mono text-xs text-[#F97316] tracking-widest uppercase font-bold block mb-1">
-                RECOMMENDED PORTAL
+                RECOMMENDED
               </span>
               <h3 className="font-heading font-extrabold text-xl text-white uppercase tracking-wide">
-                REGISTER THROUGH UNSTOP
+                REGISTER NOW! 
               </h3>
               <p className="font-sans text-xs text-[#E4E4E7]/90 mt-1 max-w-md leading-relaxed">
                 Prefer registering via the official Unstop platform? Click below to submit your team application on Unstop.
@@ -204,7 +204,7 @@ export default function Registration() {
           </div>
 
           <a
-            href={UNSTOP_URL}
+            href={REGISTRATION_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto bg-[#F97316] hover:bg-[#EA580C] text-[#18181B] font-mono font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-xs transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-xl shadow-[#F97316]/30 border border-[#F97316]"
@@ -212,8 +212,9 @@ export default function Registration() {
             REGISTER ON UNSTOP <ExternalLink className="w-4 h-4" />
           </a>
         </div>
-
-        {/* Divider */}
+{/* 
+ *        {/* Manual registration disabled - Unstop portal active below
+        // Divider
         <div className="relative my-8 flex items-center justify-center">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-[#27272A]" />
@@ -223,7 +224,7 @@ export default function Registration() {
           </span>
         </div>
 
-        {/* If Successful Submission State */}
+        // If Successful Submission State
         {submissionSuccess ? (
           <div className="bg-[#27272A]/80 border-2 border-[#F97316] p-8 sm:p-12 rounded-xs shadow-2xl text-center flex flex-col items-center">
             
@@ -243,7 +244,7 @@ export default function Registration() {
               "Your team registration has been submitted successfully."
             </p>
 
-            {/* Generated Details Card */}
+            // Generated Details Card
             <div className="bg-[#18181B] border border-[#52525B]/40 p-6 rounded-xs w-full max-w-md text-left font-mono text-xs space-y-3 mb-8">
               <div className="flex justify-between border-b border-[#27272A] pb-2">
                 <span className="text-[#52525B]">REGISTRATION ID:</span>
@@ -277,7 +278,7 @@ export default function Registration() {
           </div>
         ) : (
           
-          /* Form Container */
+          // Form Container
           <form onSubmit={handleSubmit} className="bg-[#27272A]/40 border border-[#27272A] p-6 sm:p-10 rounded-xs space-y-8 shadow-2xl">
             
             {errorMessage && (
@@ -287,7 +288,7 @@ export default function Registration() {
               </div>
             )}
 
-            {/* 1. Team Details */}
+            // 1. Team Details
             <div>
               <div className="flex items-center gap-2 border-b border-[#27272A] pb-3 mb-6">
                 <Users className="w-5 h-5 text-[#F97316]" />
@@ -338,7 +339,7 @@ export default function Registration() {
               </div>
             </div>
 
-            {/* 2. Team Leader */}
+            // 2. Team Leader
             <div>
               <div className="flex items-center gap-2 border-b border-[#27272A] pb-3 mb-6">
                 <UserCheck className="w-5 h-5 text-[#F97316]" />
@@ -422,7 +423,7 @@ export default function Registration() {
               </div>
             </div>
 
-            {/* 3. Team Members */}
+            // 3. Team Members
             <div>
               <div className="flex items-center gap-2 border-b border-[#27272A] pb-3 mb-6">
                 <Users className="w-5 h-5 text-[#F97316]" />
@@ -431,7 +432,7 @@ export default function Registration() {
                 </h3>
               </div>
 
-              {/* Member 2 */}
+              // Member 2
               <div className="bg-[#18181B] p-4 rounded-xs border border-[#27272A] mb-4 space-y-4">
                 <span className="font-mono text-xs text-[#F97316] font-bold block uppercase">
                   MEMBER 2 DETAILS (MANDATORY)
@@ -473,7 +474,7 @@ export default function Registration() {
                 </div>
               </div>
 
-              {/* Member 3 (Optional / Active if teamSize >= 3) */}
+              // Member 3 (Optional / Active if teamSize >= 3)
               {teamSize >= 3 && (
                 <div className="bg-[#18181B] p-4 rounded-xs border border-[#27272A] mb-4 space-y-4">
                   <span className="font-mono text-xs text-[#F97316] font-bold block uppercase">
@@ -517,7 +518,7 @@ export default function Registration() {
                 </div>
               )}
 
-              {/* Member 4 (Optional / Active if teamSize >= 4) */}
+              // Member 4 (Optional / Active if teamSize >= 4)
               {teamSize >= 4 && (
                 <div className="bg-[#18181B] p-4 rounded-xs border border-[#27272A] space-y-4">
                   <span className="font-mono text-xs text-[#F97316] font-bold block uppercase">
@@ -562,7 +563,7 @@ export default function Registration() {
               )}
             </div>
 
-            {/* 4. Declarations */}
+            // 4. Declarations
             <div className="pt-4 border-t border-[#27272A] space-y-4">
               <label className="flex items-start gap-3 cursor-pointer">
                 <input
@@ -597,7 +598,7 @@ export default function Registration() {
               {errors.agreeRules && <span className="font-mono text-[10px] text-[#EA580C] block pl-7">{errors.agreeRules}</span>}
             </div>
 
-            {/* Submit Button */}
+            // Submit Button
             <div className="pt-4">
               <button
                 type="submit"
@@ -619,6 +620,7 @@ export default function Registration() {
 
           </form>
         )}
+        */}
 
       </div>
     </section>
